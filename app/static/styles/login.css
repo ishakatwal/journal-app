@@ -1,0 +1,56 @@
+div {
+    float: right;
+    border-radius: 30px;
+    padding: 7px 7px 7px 7px;
+    text-align: justify;
+    background: rgba(254, 217, 217, 0.5);
+    font-size: 18px;
+}
+input[type="submit"] {
+    width: 7em;  height: 2em;
+    border-radius: 5px;
+    font-size: 17px;
+
+}
+
+section {
+    float: left;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25%;
+    border-radius: 25px;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px white;
+    font-size: 1.5em;
+    font-weight: bold;
+    background: rgba(254, 217, 217, 0.5);
+
+}
+
+header {
+    text-align: center;
+    color: tomato;
+}
+
+body {
+    background-image: url('/static/img/bg_login.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+nav {
+    font-size: 25px;
+    margin-left: 1%;
+}
+
+
+
+a {
+  color: rgb(1, 165, 236);
+  text-decoration: none;
+  text-shadow: 1px 1px white;
+}
+
+a:hover {
+  color: LimeGreen;
+}

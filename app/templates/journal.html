@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<!--Inherited head block to contain specific css file-->
+{% block head %}
+     {{ super() }}
+      <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+
+        <div class="grid-container">
+            <div class="new-memo" onclick="window.location.href='{{ url_for('new_entry') }}'"> + </div>
+            {% for post in posts %}
+
+                <div class="memo" onclick="window.location.href='{{ url_for('past_entry', record_id=post.id) }}'">
+                    {{ moment(post.timestamp).format('LLL') }}
+                    <hr>
+                    <b>{{ post.body | truncate(29) }}</b>
+                </div>
+
+            {% endfor %}
+        </div>
+            {% for error in form.post.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+            {% if request.args.get('msg') %}
+            <!--Display it and fade out after some time-->
+                <div id="msg"><p>{{ request.args.get('msg') }}</p></div>
+            {% endif %}
+
+{% endblock %}

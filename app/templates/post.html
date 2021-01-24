@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+    <script>
+    //Confirm deletion by alerting user
+    function confirm_delete(post) {
+        return confirm("You are about to permanently delete this entry. Click OK to proceed or CANCEL to quit.");
+    }
+    </script>
+
+     <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+
+{% endblock %}
+{% block content %}
+    <div class="data">
+        <p>{{ record.body }}</p>
+    </div>
+    <div class="delete">
+        <form class = "delete_form" action="" method="post" onclick="return confirm_delete(this);" novalidate>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+{% endblock %}

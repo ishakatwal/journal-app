@@ -1,0 +1,171 @@
+a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px black;
+}
+
+a:hover, .button:hover {
+  color: Aqua;
+  border-color: Aqua;
+}
+
+
+body {
+    background-image: url('/static/img/bg_index.jpeg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+
+.button {
+   padding: 25px;
+   width: 200px;
+   height: 100px;
+   border-radius: 30px;
+   margin: 10px;
+   line-height: 20px;
+   color: white;
+   font-weight: bold;
+   font-size: 2em;
+   text-align: center;
+   background-color: Tomato;
+   background-image: url('/static/img/ui-icon.png');
+   background-position: 39px;
+}
+
+.data {
+    word-wrap: break-word;
+    background-color: rgba(225, 231, 131, 0.5);
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px white;
+    font-size: 35px;
+}
+
+.delete {
+    width: 80px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: rgba(245, 131, 131, 0.5);
+    border-radius: 20px;
+    width: auto;
+    text-shadow: 1px 01px black;
+}
+
+.wrapper {
+   height: 100%;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+form {
+    padding: 15px 15px 15px 15px;
+    margin: 0 auto 0 auto;
+    border-radius: 9px;
+    width: auto;
+    color: black;
+    border: 1px solid black;
+    text-shadow: 1px 1px white;
+    background-color: rgba(225, 231, 131, 0.5);
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 35% 35% 35% 35%;
+    grid-gap: 5%;
+    background-color: rgba(225, 231, 131, 0.5);
+    width: 97%;
+    margin-left: 1%;
+    overflow: auto;
+    padding: 10px;
+    height: 100vh;
+    font-size: 3vh;
+    word-wrap: break-word;
+
+}
+
+.grid-container > .memo {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    height: 30vh;
+    margin-top: 5vh;
+    margin-left: 4vh;
+
+}
+
+.grid-container > .new-memo  {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 7vh;
+    border-radius: 5px;
+    vertical-align: middle;
+    line-height: 27vh;
+    margin-top: 5vh;
+    margin-left: 4vh;
+
+}
+
+.grid-container .memo:hover, .grid-container .new-memo:hover {
+    border:2px solid salmon;
+}
+
+
+
+input {
+    border: 1px solid black;
+    color: black;
+}
+
+#middle {
+    font-size: 30px;
+}
+
+#larger {
+    font-size: 25px;
+    font-weight: 400;
+    height: 40vh;
+    width: 75vw;
+}
+
+.delete {
+
+    opacity: 95%;
+    margin-left: 45%;
+
+}
+.new_entry {
+    background-image: url('/static/img/trees.jpeg');
+    background-size: cover;
+}
+
+
+#record {
+    color: red;
+    font-size: 35px;
+}
+
+.register-button input[type="submit"] {
+    width: 15em;  height: 3em;
+    border-radius: 5px;
+    font-size: 17px;
+
+}
+
+nav {
+  font-size: 35px;
+  margin-left: 1%;
+}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+  <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+
+  {% if current_hour < 12 %}
+      <h1>Good Morning, {{ current_user.username }}!</h1>
+  {% elif (current_hour > 12) and (current_hour < 17) %}
+      <h1>Good Afternoon, {{ current_user.username }}!</h1>
+  {% elif (current_hour > 17) and (current_hour < 21) %}
+      <h1>Good Evening, {{ current_user.username }}!</h1>
+  {% else %}
+      <h1>Welcome, {{ current_user.username }}! </h1>
+  {% endif %}
+  <div class = "wrapper">
+    <input type="submit" class="button" onclick="window.location.href='{{ url_for('journal') }}';" value="Journal">
+    <input type="submit" class="button" onclick="window.location.href='https://findrhymes.herokuapp.com/';" value="Rhymes">
+  </div>
+{% endblock %}

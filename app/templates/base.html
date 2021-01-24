@@ -1,0 +1,41 @@
+<html>
+<head>
+    {% block head %}
+      {% if title %}
+      <title>{{ title }} - Journal</title>
+      {% else %}
+      <title>Welcome to Journal App</title>
+      {% endif %}
+    {% endblock %}
+
+    {{ moment.include_jquery() }}
+    {{ moment.include_moment() }}
+    <script>$(document).ready(function () {
+          setTimeout(function () {
+              $('#flash').hide();
+          }, 2300);
+});</script>
+</head>
+
+{% block body %} {% endblock %}
+    <nav>
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('edit_profile')}}">Profile</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <hr>
+        {% endif %}
+    </nav>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul id="flash">
+       {% for message in messages %}
+       <li style="color: red; text-shadow: 1px 1px white; font-size:30px;">{{ message }}</li>
+       {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}
+    {% endblock %}
+</html>
