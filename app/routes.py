@@ -111,7 +111,6 @@ def journal():
         db.session.add(post)
         db.session.commit()
         flash('Journal posted')
-    user = {'username' : 'Isha'}
     posts = Post.query.filter_by(user_id=current_user.id).order_by(Post.timestamp.desc())
 
     return render_template('journal.html', form=form, posts=posts)
