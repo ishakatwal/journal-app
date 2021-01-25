@@ -1,3 +1,2 @@
 # JournalApp
-Python Flask app to record personal journals/poems with utility to generate rhymes.
-If you love writing poetry as I do, this is a wonderful tool to guide you in the journey. :)
+Do you maintain a journal? Do you write poems? If the answer is yes, welcome aboard! I like writing on paper but that is not the safest way to store your memories. This app helps you safeguard your personal journal entries or poems in a beautiful interface.
